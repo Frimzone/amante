@@ -1,0 +1,2081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Amante Shoe Care Center – Professional shoe repair, restoration, cleaning, and leather care services in Dasmariñas, Cavite. Book a service today." />
+  <meta name="keywords" content="shoe repair Dasmariñas, shoe restoration Cavite, shoe cleaning, leather care, sole replacement, sneaker restoration" />
+  <meta name="author" content="Amante Shoe Care Center" />
+  <meta property="og:title" content="Amante Shoe Care Center | Professional Shoe Repair & Restoration" />
+  <meta property="og:description" content="Restoring Confidence, One Pair at a Time. Professional shoe repair, restoration, and cleaning in Dasmariñas, Cavite." />
+  <meta property="og:type" content="website" />
+  <title>Amante Shoe Care Center | Shoe Repair & Restoration – Dasmariñas, Cavite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── RESET & BASE ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #FFFFFF;
+      color: #1A1A1A;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; font-family: inherit; }
+
+    /* ─── CSS VARIABLES ─── */
+    :root {
+      --black: #0A0A0A;
+      --charcoal: #1E1E1E;
+      --dark: #2A2A2A;
+      --mid: #555555;
+      --light-gray: #F5F5F5;
+      --ivory: #FAF8F4;
+      --white: #FFFFFF;
+      --gold: #C9A84C;
+      --gold-light: #E8D49A;
+      --gold-dark: #A07830;
+      --border: rgba(0,0,0,0.10);
+      --border-light: rgba(255,255,255,0.15);
+      --radius: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --transition: 0.28s ease;
+      --shadow: 0 2px 20px rgba(0,0,0,0.08);
+      --shadow-md: 0 8px 40px rgba(0,0,0,0.12);
+    }
+
+    /* ─── UTILITY ─── */
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 96px 0; }
+    .section-dark { background: var(--charcoal); color: var(--white); }
+    .section-ivory { background: var(--ivory); }
+    .section-black { background: var(--black); color: var(--white); }
+    .section-label {
+      font-size: 11px; font-weight: 600; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700; line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .section-subtitle {
+      font-size: 16px; color: var(--mid);
+      max-width: 560px; line-height: 1.8;
+    }
+    .section-header { margin-bottom: 56px; }
+    .text-gold { color: var(--gold); }
+    .text-center { text-align: center; }
+    .text-center .section-subtitle { margin: 0 auto; }
+
+    /* ─── BUTTONS ─── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 32px; font-size: 14px; font-weight: 600;
+      letter-spacing: 0.5px; border: none; border-radius: var(--radius);
+      transition: all var(--transition); white-space: nowrap;
+    }
+    .btn-gold {
+      background: var(--gold); color: var(--gold-contrast, var(--black));
+    }
+    .btn-gold:hover { background: var(--gold-dark); color: var(--white); transform: translateY(-2px); }
+    .btn-outline-white {
+      background: transparent; color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.6);
+    }
+    .btn-outline-white:hover { background: var(--white); color: var(--black); transform: translateY(-2px); }
+    .btn-outline-dark {
+      background: transparent; color: var(--dark);
+      border: 1.5px solid var(--dark);
+    }
+    .btn-outline-dark:hover { background: var(--dark); color: var(--white); transform: translateY(-2px); }
+    .btn-dark { background: var(--black); color: var(--white); }
+    .btn-dark:hover { background: var(--dark); transform: translateY(-2px); }
+
+    /* ─── NAVIGATION ─── */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 0 0; transition: all 0.3s ease;
+    }
+    #navbar.scrolled {
+      background: rgba(10,10,10,0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.06);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px; font-weight: 700; color: var(--white);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .nav-logo span { color: var(--gold); }
+    .logo-icon {
+      width: 36px; height: 36px; background: var(--gold);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    }
+    .logo-icon svg { width: 20px; height: 20px; fill: var(--black); }
+    .nav-links {
+      display: flex; align-items: center; gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 13px; font-weight: 500; letter-spacing: 0.3px;
+      color: rgba(255,255,255,0.8); transition: color var(--transition);
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold); color: var(--black) !important;
+      padding: 9px 20px; border-radius: var(--radius);
+      font-weight: 600 !important;
+    }
+    .nav-cta:hover { background: var(--gold-dark); color: var(--white) !important; }
+    .nav-toggle {
+      display: none; background: none; border: none;
+      color: var(--white); font-size: 24px; padding: 4px;
+    }
+    .nav-mobile {
+      display: none; background: rgba(10,10,10,0.98);
+      padding: 20px 24px 28px; border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-mobile.open { display: block; }
+    .nav-mobile a {
+      display: block; padding: 12px 0; font-size: 15px;
+      color: rgba(255,255,255,0.85); border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-weight: 500;
+    }
+    .nav-mobile a:hover { color: var(--gold); }
+
+    /* ─── HERO ─── */
+    #hero {
+      position: relative; min-height: 100vh;
+      display: flex; align-items: center;
+      background: var(--black); overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: 
+        linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.7) 100%),
+        url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1600&q=80') center/cover no-repeat;
+    }
+    .hero-content {
+      position: relative; z-index: 1;
+      max-width: 700px;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 11px; font-weight: 600; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 24px;
+    }
+    .hero-eyebrow::before {
+      content: ''; width: 32px; height: 1.5px; background: var(--gold);
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(38px, 6vw, 72px);
+      font-weight: 700; line-height: 1.1; color: var(--white);
+      margin-bottom: 24px;
+    }
+    .hero-title em { color: var(--gold); font-style: normal; }
+    .hero-subtitle {
+      font-size: clamp(15px, 2vw, 17px); color: rgba(255,255,255,0.75);
+      line-height: 1.8; margin-bottom: 40px; max-width: 540px;
+    }
+    .hero-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .hero-stats {
+      position: absolute; bottom: 48px; left: 0; right: 0; z-index: 1;
+    }
+    .hero-stats .container { display: flex; gap: 0; }
+    .hero-stat {
+      padding: 20px 40px 20px 0;
+      border-right: 1px solid rgba(255,255,255,0.12);
+      margin-right: 40px;
+    }
+    .hero-stat:last-child { border: none; }
+    .hero-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px; font-weight: 700; color: var(--gold);
+    }
+    .hero-stat-label {
+      font-size: 12px; color: rgba(255,255,255,0.55);
+      letter-spacing: 0.5px; margin-top: 2px;
+    }
+
+    /* ─── TRUST STRIP ─── */
+    .trust-strip {
+      background: var(--gold); padding: 16px 0;
+    }
+    .trust-inner {
+      display: flex; align-items: center; justify-content: center;
+      gap: 40px; flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px; font-weight: 600; color: var(--black);
+    }
+    .trust-item svg { width: 18px; height: 18px; }
+
+    /* ─── SERVICES ─── */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); overflow: hidden;
+      transition: all var(--transition);
+      display: flex; flex-direction: column;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--gold);
+    }
+    .service-img {
+      width: 100%; height: 200px; object-fit: cover;
+      background: var(--light-gray);
+    }
+    .service-img-placeholder {
+      width: 100%; height: 200px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 48px; background: var(--light-gray);
+    }
+    .service-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+    .service-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px; font-weight: 600; margin-bottom: 8px;
+    }
+    .service-desc { font-size: 13.5px; color: var(--mid); line-height: 1.7; flex: 1; }
+    .service-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-top: 20px; padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    .service-price { font-size: 15px; font-weight: 600; }
+    .service-price span { font-size: 12px; color: var(--mid); font-weight: 400; }
+    .btn-service {
+      padding: 8px 18px; font-size: 12px; font-weight: 600;
+      background: var(--black); color: var(--white);
+      border: none; border-radius: var(--radius);
+      transition: all var(--transition); cursor: pointer;
+    }
+    .btn-service:hover { background: var(--gold); color: var(--black); }
+
+    /* ─── BEFORE & AFTER ─── */
+    .gallery-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .ba-card {
+      border-radius: var(--radius-lg); overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .ba-slider {
+      position: relative; width: 100%; height: 240px;
+      overflow: hidden; cursor: ew-resize; user-select: none;
+    }
+    .ba-after, .ba-before {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+    }
+    .ba-after { z-index: 1; }
+    .ba-before {
+      z-index: 2;
+      clip-path: inset(0 50% 0 0);
+    }
+    .ba-handle {
+      position: absolute; top: 0; bottom: 0;
+      left: 50%; transform: translateX(-50%);
+      width: 2px; background: var(--white); z-index: 3;
+      pointer-events: none;
+    }
+    .ba-handle::before, .ba-handle::after {
+      content: '';
+      position: absolute; left: 50%; transform: translateX(-50%);
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--white); border: 2px solid var(--gold);
+      top: 50%; margin-top: -18px;
+    }
+    .ba-handle::after {
+      width: 12px; height: 12px; background: var(--gold);
+      margin-top: -6px; border: none;
+    }
+    .ba-label-before, .ba-label-after {
+      position: absolute; bottom: 12px; z-index: 4;
+      font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; padding: 4px 10px; border-radius: 2px;
+    }
+    .ba-label-before { left: 12px; background: rgba(0,0,0,0.7); color: #fff; }
+    .ba-label-after { right: 12px; background: var(--gold); color: var(--black); }
+    .ba-card-label {
+      background: var(--white); padding: 14px 16px;
+      font-size: 13px; font-weight: 600; text-align: center;
+    }
+
+    /* ─── SHOP ─── */
+    .shop-controls {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; margin-bottom: 40px; flex-wrap: wrap;
+    }
+    .shop-search {
+      display: flex; align-items: center; gap: 0;
+      border: 1.5px solid var(--border); border-radius: var(--radius);
+      overflow: hidden; background: var(--white); flex: 1; max-width: 360px;
+    }
+    .shop-search input {
+      flex: 1; padding: 11px 16px; font-size: 14px;
+      border: none; outline: none; font-family: inherit;
+    }
+    .shop-search button {
+      padding: 11px 16px; background: var(--black); color: var(--white);
+      border: none; font-size: 15px;
+    }
+    .shop-search button:hover { background: var(--gold); color: var(--black); }
+    .products-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .product-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); overflow: hidden;
+      transition: all var(--transition);
+    }
+    .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .product-img {
+      width: 100%; height: 200px; object-fit: cover;
+      background: var(--light-gray);
+    }
+    .product-img-placeholder {
+      width: 100%; height: 200px;
+      background: var(--light-gray);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 48px;
+    }
+    .product-body { padding: 16px; }
+    .product-name { font-weight: 600; font-size: 15px; margin-bottom: 4px; }
+    .product-desc { font-size: 12.5px; color: var(--mid); margin-bottom: 12px; line-height: 1.6; }
+    .product-footer {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .product-price { font-size: 16px; font-weight: 700; color: var(--black); }
+    .product-stock { font-size: 11px; color: var(--mid); margin-top: 2px; }
+    .btn-add-cart {
+      padding: 8px 14px; font-size: 12px; font-weight: 600;
+      background: var(--gold); color: var(--black); border: none;
+      border-radius: var(--radius); transition: all var(--transition); cursor: pointer;
+    }
+    .btn-add-cart:hover { background: var(--black); color: var(--white); }
+    .btn-add-cart:disabled { background: #ddd; color: #999; cursor: not-allowed; }
+
+    /* ─── CART ─── */
+    #cart-overlay {
+      display: none; position: fixed; inset: 0; z-index: 2000;
+      background: rgba(0,0,0,0.5);
+    }
+    #cart-overlay.open { display: block; }
+    #cart-panel {
+      position: fixed; right: 0; top: 0; bottom: 0; width: 420px;
+      max-width: 100vw; background: var(--white); z-index: 2001;
+      display: flex; flex-direction: column;
+      transform: translateX(100%); transition: transform 0.32s ease;
+      box-shadow: -4px 0 40px rgba(0,0,0,0.15);
+    }
+    #cart-panel.open { transform: translateX(0); }
+    .cart-header {
+      padding: 24px; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .cart-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; }
+    .cart-close {
+      width: 36px; height: 36px; background: var(--light-gray);
+      border: none; border-radius: 50%; font-size: 18px; cursor: pointer;
+    }
+    .cart-items { flex: 1; overflow-y: auto; padding: 16px 24px; }
+    .cart-item {
+      display: flex; gap: 12px; padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .cart-item-img {
+      width: 72px; height: 72px; object-fit: cover;
+      border-radius: var(--radius); background: var(--light-gray); flex-shrink: 0;
+    }
+    .cart-item-info { flex: 1; }
+    .cart-item-name { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+    .cart-item-price { font-size: 13px; color: var(--mid); }
+    .cart-item-controls {
+      display: flex; align-items: center; gap: 8px; margin-top: 8px;
+    }
+    .qty-btn {
+      width: 28px; height: 28px; border: 1px solid var(--border);
+      background: none; border-radius: 4px; font-size: 16px; cursor: pointer;
+    }
+    .qty-btn:hover { background: var(--light-gray); }
+    .qty-display { font-size: 14px; font-weight: 600; min-width: 24px; text-align: center; }
+    .cart-remove {
+      background: none; border: none; color: #999; font-size: 18px;
+      cursor: pointer; margin-left: auto;
+    }
+    .cart-remove:hover { color: #e44; }
+    .cart-footer { padding: 20px 24px; border-top: 1px solid var(--border); }
+    .cart-subtotal {
+      display: flex; justify-content: space-between;
+      font-size: 16px; font-weight: 600; margin-bottom: 16px;
+    }
+    .cart-empty {
+      text-align: center; padding: 60px 0; color: var(--mid);
+    }
+    .cart-empty-icon { font-size: 48px; margin-bottom: 16px; }
+
+    /* ─── CHECKOUT MODAL ─── */
+    #checkout-modal {
+      display: none; position: fixed; inset: 0; z-index: 3000;
+      background: rgba(0,0,0,0.6); overflow-y: auto;
+      padding: 40px 16px;
+    }
+    #checkout-modal.open { display: flex; align-items: flex-start; justify-content: center; }
+    .checkout-box {
+      background: var(--white); border-radius: var(--radius-lg);
+      width: 100%; max-width: 560px; padding: 40px;
+      position: relative;
+    }
+    .checkout-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px; font-weight: 700; margin-bottom: 8px;
+    }
+    .checkout-subtitle { font-size: 14px; color: var(--mid); margin-bottom: 28px; }
+    .form-group { margin-bottom: 18px; }
+    .form-label {
+      display: block; font-size: 12px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.5px;
+      color: var(--dark); margin-bottom: 6px;
+    }
+    .form-input {
+      width: 100%; padding: 12px 14px; font-size: 14px;
+      border: 1.5px solid var(--border); border-radius: var(--radius);
+      font-family: inherit; outline: none; transition: border-color var(--transition);
+      background: var(--white); color: var(--black);
+    }
+    .form-input:focus { border-color: var(--gold); }
+    textarea.form-input { resize: vertical; min-height: 80px; }
+    .checkout-summary {
+      background: var(--ivory); border-radius: var(--radius-md);
+      padding: 16px; margin-bottom: 24px;
+    }
+    .checkout-summary-title { font-weight: 600; font-size: 13px; margin-bottom: 10px; }
+    .checkout-item {
+      display: flex; justify-content: space-between;
+      font-size: 13px; padding: 4px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .checkout-total {
+      display: flex; justify-content: space-between;
+      font-weight: 700; font-size: 15px; margin-top: 10px;
+    }
+    .checkout-close {
+      position: absolute; top: 16px; right: 16px;
+      width: 32px; height: 32px; background: var(--light-gray);
+      border: none; border-radius: 50%; font-size: 16px; cursor: pointer;
+    }
+
+    /* ─── SUCCESS MODAL ─── */
+    #success-modal {
+      display: none; position: fixed; inset: 0; z-index: 4000;
+      background: rgba(0,0,0,0.6); align-items: center; justify-content: center;
+    }
+    #success-modal.open { display: flex; }
+    .success-box {
+      background: var(--white); border-radius: var(--radius-lg);
+      padding: 48px 40px; text-align: center; max-width: 440px; width: 90%;
+    }
+    .success-icon {
+      width: 72px; height: 72px; background: #e8f5e9;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px; font-size: 32px;
+    }
+    .success-title {
+      font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .success-ref {
+      display: inline-block; background: var(--ivory); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 8px 20px;
+      font-family: monospace; font-size: 16px; font-weight: 700;
+      color: var(--gold-dark); margin: 16px 0;
+    }
+
+    /* ─── BOOKING MODAL ─── */
+    #booking-modal {
+      display: none; position: fixed; inset: 0; z-index: 3000;
+      background: rgba(0,0,0,0.6); overflow-y: auto;
+      padding: 40px 16px;
+    }
+    #booking-modal.open { display: flex; align-items: flex-start; justify-content: center; }
+    .booking-box {
+      background: var(--white); border-radius: var(--radius-lg);
+      width: 100%; max-width: 520px; padding: 40px;
+      position: relative;
+    }
+
+    /* ─── ABOUT ─── */
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 72px; align-items: center;
+    }
+    .about-img-wrap {
+      position: relative;
+    }
+    .about-img {
+      width: 100%; height: 480px; object-fit: cover;
+      border-radius: var(--radius-lg);
+    }
+    .about-img-placeholder {
+      width: 100%; height: 480px; background: var(--light-gray);
+      border-radius: var(--radius-lg); display: flex; align-items: center;
+      justify-content: center; font-size: 80px;
+    }
+    .about-badge {
+      position: absolute; bottom: -24px; right: -24px;
+      background: var(--gold); color: var(--black);
+      border-radius: var(--radius-lg); padding: 24px;
+      font-family: 'Playfair Display', serif;
+      text-align: center; box-shadow: var(--shadow-md);
+    }
+    .about-badge-num { font-size: 36px; font-weight: 700; display: block; }
+    .about-badge-label { font-size: 11px; font-weight: 600; letter-spacing: 1px; }
+    .about-features { margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .about-feature {
+      display: flex; gap: 12px; align-items: flex-start;
+    }
+    .about-feature-icon {
+      width: 36px; height: 36px; background: rgba(201,168,76,0.12);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 16px;
+    }
+    .about-feature-text { font-size: 13.5px; color: var(--dark); }
+    .about-feature-label { font-weight: 600; font-size: 14px; margin-bottom: 2px; }
+
+    /* ─── TESTIMONIALS ─── */
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .testimonial-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 28px;
+      transition: all var(--transition);
+    }
+    .testimonial-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .stars { color: var(--gold); font-size: 14px; letter-spacing: 2px; margin-bottom: 14px; }
+    .testimonial-text {
+      font-size: 14px; line-height: 1.8; color: var(--dark);
+      font-style: italic; margin-bottom: 20px;
+    }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .author-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--gold); display: flex; align-items: center;
+      justify-content: center; font-weight: 700; font-size: 15px; color: var(--black);
+    }
+    .author-name { font-weight: 600; font-size: 14px; }
+    .author-sub { font-size: 12px; color: var(--mid); }
+
+    /* ─── CONTACT ─── */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+    .contact-info-item {
+      display: flex; gap: 16px; align-items: flex-start;
+      margin-bottom: 28px;
+    }
+    .contact-icon {
+      width: 48px; height: 48px; background: rgba(201,168,76,0.12);
+      border-radius: 50%; display: flex; align-items: center;
+      justify-content: center; font-size: 20px; flex-shrink: 0;
+    }
+    .contact-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+    .contact-value { font-size: 15px; color: rgba(255,255,255,0.85); }
+    .contact-value a { color: rgba(255,255,255,0.85); }
+    .contact-value a:hover { color: var(--gold); }
+    .map-container {
+      border-radius: var(--radius-lg); overflow: hidden;
+      height: 380px; background: var(--dark);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .map-container iframe { width: 100%; height: 100%; border: none; }
+    .hours-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4px 0;
+      margin-top: 4px;
+    }
+    .hours-day { font-size: 13px; color: rgba(255,255,255,0.55); }
+    .hours-time { font-size: 13px; color: rgba(255,255,255,0.85); font-weight: 500; text-align: right; }
+
+    /* ─── ADMIN PANEL ─── */
+    #admin-panel {
+      display: none; position: fixed; inset: 0; z-index: 5000;
+      background: rgba(0,0,0,0.7); overflow-y: auto; padding: 32px 16px;
+    }
+    #admin-panel.open { display: flex; align-items: flex-start; justify-content: center; }
+    .admin-box {
+      background: var(--white); border-radius: var(--radius-lg);
+      width: 100%; max-width: 680px; padding: 40px;
+      position: relative;
+    }
+    .admin-title {
+      font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700;
+      margin-bottom: 28px; display: flex; align-items: center; gap: 10px;
+    }
+    .admin-badge {
+      background: var(--gold); color: var(--black); font-size: 10px;
+      font-weight: 800; letter-spacing: 1px; padding: 3px 8px;
+      border-radius: 3px; font-family: 'Inter', sans-serif;
+    }
+    .admin-tabs {
+      display: flex; gap: 0; border-bottom: 2px solid var(--border); margin-bottom: 28px;
+    }
+    .admin-tab {
+      padding: 10px 20px; font-size: 13px; font-weight: 600;
+      border: none; background: none; cursor: pointer; color: var(--mid);
+      border-bottom: 2px solid transparent; margin-bottom: -2px;
+      transition: all var(--transition);
+    }
+    .admin-tab.active { color: var(--black); border-bottom-color: var(--gold); }
+    .admin-tab-content { display: none; }
+    .admin-tab-content.active { display: block; }
+    .product-list-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px; border: 1px solid var(--border); border-radius: var(--radius-md);
+      margin-bottom: 8px;
+    }
+    .product-list-thumb {
+      width: 52px; height: 52px; object-fit: cover; border-radius: var(--radius);
+      background: var(--light-gray); flex-shrink: 0;
+    }
+    .product-list-info { flex: 1; }
+    .product-list-name { font-weight: 600; font-size: 14px; }
+    .product-list-meta { font-size: 12px; color: var(--mid); }
+    .product-list-actions { display: flex; gap: 8px; }
+    .btn-edit {
+      padding: 6px 14px; font-size: 12px; font-weight: 600;
+      background: var(--light-gray); border: none; border-radius: var(--radius);
+      cursor: pointer; transition: all var(--transition);
+    }
+    .btn-edit:hover { background: var(--gold); color: var(--black); }
+    .btn-delete {
+      padding: 6px 14px; font-size: 12px; font-weight: 600;
+      background: #fee; border: none; border-radius: var(--radius);
+      cursor: pointer; color: #c33; transition: all var(--transition);
+    }
+    .btn-delete:hover { background: #c33; color: white; }
+
+    /* ─── CART BADGE ─── */
+    .cart-fab {
+      position: fixed; bottom: 32px; right: 32px; z-index: 900;
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--gold); color: var(--black); border: none;
+      font-size: 22px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: all var(--transition);
+    }
+    .cart-fab:hover { background: var(--black); color: var(--white); transform: scale(1.08); }
+    .cart-badge {
+      position: absolute; top: -4px; right: -4px;
+      width: 22px; height: 22px; border-radius: 50%;
+      background: #e33; color: white; font-size: 11px;
+      font-weight: 700; display: none; align-items: center;
+      justify-content: center; border: 2px solid white;
+    }
+    .cart-badge.show { display: flex; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: #060606; color: rgba(255,255,255,0.6);
+      padding: 64px 0 0;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 48px; padding-bottom: 48px;
+    }
+    .footer-brand p { font-size: 13.5px; line-height: 1.8; margin-top: 16px; max-width: 280px; }
+    .footer-title {
+      font-size: 11px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a {
+      font-size: 13.5px; color: rgba(255,255,255,0.6);
+      transition: color var(--transition);
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-contact-item {
+      display: flex; gap: 10px; align-items: flex-start;
+      font-size: 13.5px; margin-bottom: 12px;
+    }
+    .footer-contact-item span:first-child { font-size: 16px; flex-shrink: 0; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 20px 0; display: flex; align-items: center;
+      justify-content: space-between; font-size: 12.5px;
+    }
+    .footer-social { display: flex; gap: 12px; }
+    .social-btn {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.7); font-size: 14px;
+      display: flex; align-items: center; justify-content: center;
+      transition: all var(--transition); cursor: pointer; text-decoration: none;
+    }
+    .social-btn:hover { background: var(--gold); color: var(--black); border-color: var(--gold); }
+
+    /* ─── NOTIFICATION ─── */
+    .notification {
+      position: fixed; top: 88px; right: 24px; z-index: 9999;
+      background: var(--black); color: var(--white);
+      padding: 14px 20px; border-radius: var(--radius-md);
+      font-size: 14px; font-weight: 500;
+      display: flex; align-items: center; gap: 10px;
+      box-shadow: var(--shadow-md);
+      transform: translateX(120%); transition: transform 0.3s ease;
+      max-width: 320px;
+    }
+    .notification.show { transform: translateX(0); }
+    .notif-icon { color: var(--gold); font-size: 18px; }
+
+    /* ─── LOADING ─── */
+    .spinner {
+      display: inline-block; width: 18px; height: 18px;
+      border: 2px solid rgba(0,0,0,0.15); border-top-color: var(--black);
+      border-radius: 50%; animation: spin 0.7s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1024px) {
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .about-badge { bottom: -16px; right: -8px; }
+    }
+    @media (max-width: 768px) {
+      .section { padding: 64px 0; }
+      .nav-links { display: none; }
+      .nav-toggle { display: block; }
+      .hero-stats { display: none; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .products-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+      .checkout-box, .booking-box { padding: 28px 20px; }
+      .admin-box { padding: 24px 16px; }
+      #cart-panel { width: 100vw; }
+    }
+    @media (max-width: 480px) {
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+      .trust-inner { gap: 20px; }
+      .about-features { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════ NOTIFICATION ═══════════════════════ -->
+<div class="notification" id="notification">
+  <span class="notif-icon">✓</span>
+  <span id="notif-text">Added to cart!</span>
+</div>
+
+<!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="images/logo.png" alt="Amante Shoe Care Center" class="nav-logo-img" style="height:44px; width:auto; object-fit:contain; display:block;" onerror="this.style.display='none'; document.querySelector('.nav-logo-fallback').style.display='flex';" />
+        <div class="nav-logo-fallback" style="display:none; align-items:center; gap:8px;">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 13.5C3 11.5 4.5 10 6.5 10H18L20 13.5C20 15.5 18.5 17 16.5 17H4L3 13.5Z"/><path d="M6 10L8 6H16L18 10"/></svg>
+          </div>
+          Amante <span>SC</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" class="nav-cta" onclick="openBooking(); return false;">Book Now</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="#hero" onclick="closeNav()">Home</a>
+    <a href="#services" onclick="closeNav()">Services</a>
+    <a href="#shop" onclick="closeNav()">Shop</a>
+    <a href="#about" onclick="closeNav()">About Us</a>
+    <a href="#testimonials" onclick="closeNav()">Reviews</a>
+    <a href="#contact" onclick="closeNav()">Contact</a>
+    <a href="#" onclick="openBooking(); closeNav(); return false;" style="color: var(--gold) !important; font-weight: 700;">📅 Book a Service</a>
+    <a href="#" onclick="openAdmin(); closeNav(); return false;" style="color: rgba(255,255,255,0.35); font-size: 12px;">Admin Panel</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Dasmariñas, Cavite</div>
+      <h1 class="hero-title">
+        Restoring <em>Confidence,</em><br>One Pair at a Time.
+      </h1>
+      <p class="hero-subtitle">
+        Professional Shoe Repair, Restoration, Cleaning, and Leather Care Services in Dasmariñas, Cavite.
+      </p>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-gold" onclick="openBooking(); return false;">📅 Book a Service</a>
+        <a href="#services" class="btn btn-outline-white">View Services</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="container">
+      <div class="hero-stat">
+        <div class="hero-stat-num">500+</div>
+        <div class="hero-stat-label">Pairs Restored</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">5★</div>
+        <div class="hero-stat-label">Customer Rating</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">9+</div>
+        <div class="hero-stat-label">Services Offered</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">100%</div>
+        <div class="hero-stat-label">Satisfaction Guarantee</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ TRUST STRIP ═══════════════════════ -->
+<div class="trust-strip">
+  <div class="container">
+    <div class="trust-inner">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        Quality Guaranteed
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Trusted Craftsmanship
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        Fast Turnaround
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        Customer Satisfaction
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Dasmariñas, Cavite
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ SERVICES ═══════════════════════ -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">Expert care for your footwear — from deep cleaning to full restoration. Every pair treated with precision and passion.</p>
+    </div>
+    <div class="services-grid" id="services-grid">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ BEFORE & AFTER ═══════════════════════ -->
+<section id="gallery" class="section section-ivory">
+  <div class="container">
+    <div class="section-header text-center">
+      <div class="section-label">The Transformation</div>
+      <h2 class="section-title">Before &amp; After</h2>
+      <p class="section-subtitle">Drag the slider to reveal the transformation. See the difference our expertise makes.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="ba-card">
+        <div class="ba-slider" data-slider>
+          <div class="ba-after" style="background-image: url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80')"></div>
+          <div class="ba-before" style="background-image: url('https://images.unsplash.com/photo-1595341888016-a392ef81b7de?w=600&q=80')"></div>
+          <div class="ba-handle"></div>
+          <span class="ba-label-before">Before</span>
+          <span class="ba-label-after">After</span>
+        </div>
+        <div class="ba-card-label">👟 Sneaker Deep Clean</div>
+      </div>
+      <div class="ba-card">
+        <div class="ba-slider" data-slider>
+          <div class="ba-after" style="background-image: url('https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&q=80')"></div>
+          <div class="ba-before" style="background-image: url('https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600&q=80')"></div>
+          <div class="ba-handle"></div>
+          <span class="ba-label-before">Before</span>
+          <span class="ba-label-after">After</span>
+        </div>
+        <div class="ba-card-label">👞 Leather Restoration</div>
+      </div>
+      <div class="ba-card">
+        <div class="ba-slider" data-slider>
+          <div class="ba-after" style="background-image: url('https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=600&q=80')"></div>
+          <div class="ba-before" style="background-image: url('https://images.unsplash.com/photo-1605408499391-6368c628ef42?w=600&q=80')"></div>
+          <div class="ba-handle"></div>
+          <span class="ba-label-before">Before</span>
+          <span class="ba-label-after">After</span>
+        </div>
+        <div class="ba-card-label">🥿 Color Repainting</div>
+      </div>
+      <div class="ba-card">
+        <div class="ba-slider" data-slider>
+          <div class="ba-after" style="background-image: url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80')"></div>
+          <div class="ba-before" style="background-image: url('https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80')"></div>
+          <div class="ba-handle"></div>
+          <span class="ba-label-before">Before</span>
+          <span class="ba-label-after">After</span>
+        </div>
+        <div class="ba-card-label">👡 Sole Replacement</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ SHOP ═══════════════════════ -->
+<section id="shop" class="section">
+  <div class="container">
+    <div class="section-header" style="display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:16px; margin-bottom:32px;">
+      <div>
+        <div class="section-label">Online Shop</div>
+        <h2 class="section-title" style="margin-bottom:0;">Shop Products</h2>
+      </div>
+      <div class="shop-controls" style="margin-bottom:0;">
+        <div class="shop-search">
+          <input type="text" id="search-input" placeholder="Search products..." oninput="filterProducts()" />
+          <button>🔍</button>
+        </div>
+      </div>
+    </div>
+    <div class="products-grid" id="products-grid">
+      <!-- Populated by JS -->
+    </div>
+    <div id="no-products" style="display:none; text-align:center; padding:60px 0; color:var(--mid);">
+      <div style="font-size:48px; margin-bottom:16px;">🔍</div>
+      <p>No products found. Try a different search.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ ABOUT ═══════════════════════ -->
+<section id="about" class="section section-ivory">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap">
+        <div class="about-img-placeholder">🛠️</div>
+        <div class="about-badge">
+          <span class="about-badge-num">5★</span>
+          <span class="about-badge-label">Customer Rating</span>
+        </div>
+      </div>
+      <div>
+        <div class="section-label">Who We Are</div>
+        <h2 class="section-title">Craftsmanship<br>Built on Trust</h2>
+        <p style="color:var(--mid); font-size:15px; line-height:1.9; margin-bottom:20px;">
+          Amante Shoe Care Center specializes in professional shoe repair, restoration, and maintenance services. With years of experience and attention to detail, we help customers extend the life of their footwear while preserving comfort, style, and quality.
+        </p>
+        <p style="color:var(--mid); font-size:15px; line-height:1.9;">
+          Located in the heart of Dasmariñas, Cavite, we take pride in every pair that leaves our shop — treated with the same care and precision as if it were our own.
+        </p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="about-feature-icon">🎯</div>
+            <div class="about-feature-text">
+              <div class="about-feature-label">Attention to Detail</div>
+              Every stitch and sole matters.
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">🏆</div>
+            <div class="about-feature-text">
+              <div class="about-feature-label">Quality Materials</div>
+              Only the best for your shoes.
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">⚡</div>
+            <div class="about-feature-text">
+              <div class="about-feature-label">Fast Turnaround</div>
+              Ready when you need them.
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">💬</div>
+            <div class="about-feature-text">
+              <div class="about-feature-label">Personal Service</div>
+              We listen, then we deliver.
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:32px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="#" class="btn btn-gold" onclick="openBooking(); return false;">Book a Service</a>
+          <a href="#contact" class="btn btn-outline-dark">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ TESTIMONIALS ═══════════════════════ -->
+<section id="testimonials" class="section section-dark">
+  <div class="container">
+    <div class="section-header text-center">
+      <div class="section-label">What Clients Say</div>
+      <h2 class="section-title" style="color:white;">Customer Reviews</h2>
+      <p class="section-subtitle" style="color:rgba(255,255,255,0.6); margin:0 auto;">Real feedback from real customers who trusted us with their footwear.</p>
+    </div>
+    <div class="testimonials-grid" id="testimonials-grid">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ CONTACT ═══════════════════════ -->
+<section id="contact" class="section section-black">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title" style="color:white;">Visit or Contact Us</h2>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Address</div>
+            <div class="contact-value">Zone 1, 15 Camerino Ave,<br>Dasmariñas, Cavite 4114</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-value"><a href="tel:09508962600">0950 896 2600</a></div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon">📘</div>
+          <div>
+            <div class="contact-label">Facebook</div>
+            <div class="contact-value">
+              <a href="https://www.facebook.com/amanteshoerepaircenter/" target="_blank" rel="noopener">
+                Amante Shoe Care Center ↗
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <div class="contact-label">Business Hours</div>
+            <div class="hours-grid">
+              <div class="hours-day">Monday – Friday</div>
+              <div class="hours-time">8:00 AM – 6:00 PM</div>
+              <div class="hours-day">Saturday</div>
+              <div class="hours-time">8:00 AM – 6:00 PM</div>
+              <div class="hours-day">Sunday</div>
+              <div class="hours-time">Closed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.7!2d120.9378!3d14.3300!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d7f4a5a5a5a5%3A0x5b5b5b5b5b5b5b5b!2sAmante%20Shoe%20Care%20Center!5e0!3m2!1sen!2sph!4v1700000000000!5m2!1sen!2sph"
+            allowfullscreen loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Amante Shoe Care Center Location">
+          </iframe>
+        </div>
+        <div style="margin-top:16px; text-align:center;">
+          <a href="https://maps.google.com/?q=Zone+1+15+Camerino+Ave+Dasmarinas+Cavite" target="_blank" rel="noopener" class="btn btn-outline-white" style="font-size:13px;">
+            Open in Google Maps ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom:0;">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 13.5C3 11.5 4.5 10 6.5 10H18L20 13.5C20 15.5 18.5 17 16.5 17H4L3 13.5Z"/><path d="M6 10L8 6H16L18 10"/></svg>
+          </div>
+          <span style="color:white;">Amante <span style="color:var(--gold);">Shoe Care</span></span>
+        </div>
+        <p>Professional shoe repair, restoration, and leather care in Dasmariñas, Cavite. Restoring confidence, one pair at a time.</p>
+      </div>
+      <div>
+        <div class="footer-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">Deep Shoe Cleaning</a></li>
+          <li><a href="#services">Sole Replacement</a></li>
+          <li><a href="#services">Shoe Restoration</a></li>
+          <li><a href="#services">Leather Conditioning</a></li>
+          <li><a href="#services">Color Repainting</a></li>
+          <li><a href="#services">Sneaker Restoration</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">Contact</div>
+        <div class="footer-contact-item">
+          <span>📍</span>
+          <span>Zone 1, 15 Camerino Ave, Dasmariñas, Cavite 4114</span>
+        </div>
+        <div class="footer-contact-item">
+          <span>📞</span>
+          <span><a href="tel:09508962600" style="color:rgba(255,255,255,0.6);">0950 896 2600</a></span>
+        </div>
+        <div class="footer-contact-item">
+          <span>✉️</span>
+          <span><a href="mailto:amante.shoecarecenter@gmail.com" style="color:rgba(255,255,255,0.6);">amante.shoecarecenter<br>@gmail.com</a></span>
+        </div>
+        <div class="footer-contact-item">
+          <span>🕐</span>
+          <span>Mon–Sat: 8AM – 6PM</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Amante Shoe Care Center. All rights reserved.</span>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/amanteshoerepaircenter/" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook">f</a>
+        <a href="tel:09508962600" class="social-btn" aria-label="Call us">📞</a>
+        <a href="mailto:amante.shoecarecenter@gmail.com" class="social-btn" aria-label="Email us">✉</a>
+        <a href="#" onclick="openAdmin(); return false;" class="social-btn" title="Admin" style="font-size:10px;">⚙</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════ CART FAB ═══════════════════════ -->
+<button class="cart-fab" onclick="openCart()" aria-label="Open cart">
+  🛒
+  <div class="cart-badge" id="cart-badge">0</div>
+</button>
+
+<!-- ═══════════════════════ CART PANEL ═══════════════════════ -->
+<div id="cart-overlay" onclick="closeCart()"></div>
+<div id="cart-panel">
+  <div class="cart-header">
+    <div class="cart-title">🛒 Your Cart</div>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cart-items-list">
+    <!-- JS populated -->
+  </div>
+  <div class="cart-footer" id="cart-footer" style="display:none;">
+    <div class="cart-subtotal">
+      <span>Total</span>
+      <span id="cart-total">₱0.00</span>
+    </div>
+    <button class="btn btn-gold" style="width:100%;" onclick="openCheckout()">Proceed to Checkout →</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════ CHECKOUT MODAL ═══════════════════════ -->
+<div id="checkout-modal">
+  <div class="checkout-box">
+    <button class="checkout-close" onclick="closeCheckout()">✕</button>
+    <h2 class="checkout-title">Complete Your Order</h2>
+    <p class="checkout-subtitle">Fill in your details and we'll process your order right away.</p>
+
+    <div class="checkout-summary" id="checkout-summary"></div>
+
+    <div class="form-group">
+      <label class="form-label">Full Name *</label>
+      <input type="text" class="form-input" id="co-name" placeholder="Juan Dela Cruz" required />
+    </div>
+    <div class="form-group">
+      <label class="form-label">Mobile Number *</label>
+      <input type="tel" class="form-input" id="co-phone" placeholder="09XX XXX XXXX" required />
+    </div>
+    <div class="form-group">
+      <label class="form-label">Email Address *</label>
+      <input type="email" class="form-input" id="co-email" placeholder="you@email.com" required />
+    </div>
+    <div class="form-group">
+      <label class="form-label">Delivery Address *</label>
+      <textarea class="form-input" id="co-address" placeholder="Street, Barangay, City, Province" rows="3" required></textarea>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Special Instructions</label>
+      <textarea class="form-input" id="co-notes" placeholder="Any special requests or instructions..." rows="2"></textarea>
+    </div>
+    <button class="btn btn-gold" style="width:100%; font-size:15px; padding:16px;" id="place-order-btn" onclick="placeOrder()">
+      Place Order →
+    </button>
+    <p style="font-size:12px; color:var(--mid); text-align:center; margin-top:12px;">
+      🔒 Your information is secure and will only be used to process your order.
+    </p>
+  </div>
+</div>
+
+<!-- ═══════════════════════ BOOKING MODAL ═══════════════════════ -->
+<div id="booking-modal">
+  <div class="booking-box">
+    <button class="checkout-close" onclick="closeBooking()">✕</button>
+    <h2 class="checkout-title">Book a Service</h2>
+    <p class="checkout-subtitle">Fill in your details and we'll get back to you to confirm your appointment.</p>
+    <div class="form-group">
+      <label class="form-label">Full Name *</label>
+      <input type="text" class="form-input" id="bk-name" placeholder="Juan Dela Cruz" required />
+    </div>
+    <div class="form-group">
+      <label class="form-label">Mobile Number *</label>
+      <input type="tel" class="form-input" id="bk-phone" placeholder="09XX XXX XXXX" required />
+    </div>
+    <div class="form-group">
+      <label class="form-label">Email Address</label>
+      <input type="email" class="form-input" id="bk-email" placeholder="you@email.com" />
+    </div>
+    <div class="form-group">
+      <label class="form-label">Service Needed *</label>
+      <select class="form-input" id="bk-service">
+        <option value="">Select a service...</option>
+        <option>Deep Shoe Cleaning</option>
+        <option>Sole Regluing</option>
+        <option>Sole Replacement</option>
+        <option>Shoe Restoration</option>
+        <option>Leather Conditioning</option>
+        <option>Color Repainting</option>
+        <option>Sneaker Restoration</option>
+        <option>Bag Repair</option>
+        <option>Belt Repair</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Preferred Date</label>
+      <input type="date" class="form-input" id="bk-date" />
+    </div>
+    <div class="form-group">
+      <label class="form-label">Additional Notes</label>
+      <textarea class="form-input" id="bk-notes" placeholder="Describe the condition of your shoes..." rows="3"></textarea>
+    </div>
+    <button class="btn btn-gold" style="width:100%; font-size:15px; padding:16px;" id="book-btn" onclick="submitBooking()">
+      Request Booking →
+    </button>
+  </div>
+</div>
+
+<!-- ═══════════════════════ SUCCESS MODAL ═══════════════════════ -->
+<div id="success-modal">
+  <div class="success-box">
+    <div class="success-icon">✅</div>
+    <h2 class="success-title" id="success-title">Order Placed!</h2>
+    <p id="success-msg" style="color:var(--mid); font-size:14px; line-height:1.7;">
+      Thank you for your order. We've sent a confirmation to your email. Our team will contact you shortly.
+    </p>
+    <div class="success-ref" id="success-ref">ORD-000000</div>
+    <p style="font-size:12px; color:var(--mid);">Please save this reference number.</p>
+    <button class="btn btn-gold" style="margin-top:24px; width:100%;" onclick="closeSuccess()">Done</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════ ADMIN PANEL ═══════════════════════ -->
+<div id="admin-panel">
+  <div class="admin-box">
+    <button class="checkout-close" onclick="closeAdmin()" style="position:absolute; top:16px; right:16px;">✕</button>
+    <h2 class="admin-title">
+      Admin Panel <span class="admin-badge">ADMIN</span>
+    </h2>
+    <div class="admin-tabs">
+      <button class="admin-tab active" onclick="switchTab('tab-add')">➕ Add Product</button>
+      <button class="admin-tab" onclick="switchTab('tab-manage')">📦 Manage Products</button>
+    </div>
+
+    <!-- ADD PRODUCT TAB -->
+    <div class="admin-tab-content active" id="tab-add">
+      <div class="form-group">
+        <label class="form-label">Product Name *</label>
+        <input type="text" class="form-input" id="ap-name" placeholder="e.g. Leather Conditioner 250ml" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Description *</label>
+        <textarea class="form-input" id="ap-desc" placeholder="Short product description..." rows="2"></textarea>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+        <div class="form-group">
+          <label class="form-label">Price (₱) *</label>
+          <input type="number" class="form-input" id="ap-price" placeholder="150" min="0" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Stock Quantity *</label>
+          <input type="number" class="form-input" id="ap-stock" placeholder="10" min="0" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Product Image URL</label>
+        <input type="url" class="form-input" id="ap-img" placeholder="https://... or leave blank for emoji" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Emoji Icon (if no image)</label>
+        <input type="text" class="form-input" id="ap-emoji" placeholder="🧴" maxlength="4" />
+      </div>
+      <div id="edit-product-id" style="display:none;"></div>
+      <div style="display:flex; gap:12px; margin-top:8px;">
+        <button class="btn btn-gold" style="flex:1;" id="save-product-btn" onclick="saveProduct()">Save Product</button>
+        <button class="btn btn-outline-dark" onclick="resetProductForm()" style="padding:14px 20px;">Reset</button>
+      </div>
+    </div>
+
+    <!-- MANAGE TAB -->
+    <div class="admin-tab-content" id="tab-manage">
+      <div id="admin-product-list">
+        <!-- JS populated -->
+      </div>
+      <div id="admin-empty" style="text-align:center; padding:40px; color:var(--mid); display:none;">
+        No products yet. Add your first product in the Add tab.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ JAVASCRIPT ═══════════════════════ -->
+<script>
+// ─── DATA ───────────────────────────────────────────────────
+const SERVICES_DATA = [
+  { emoji:'🧽', title:'Deep Shoe Cleaning', desc:'Complete interior and exterior cleaning. Removes dirt, stains, and odors. Restored to like-new freshness.', price:'₱150', img:'https://images.unsplash.com/photo-1556906781-9a414961a183?w=400&q=80' },
+  { emoji:'🔧', title:'Sole Regluing', desc:'Reattachment of separating or detached soles using industrial-grade adhesive for lasting hold.', price:'₱120', img:'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400&q=80' },
+  { emoji:'👟', title:'Sole Replacement', desc:'Full or partial sole replacement with quality rubber or leather soles. Custom fit for any shoe type.', price:'₱250', img:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80' },
+  { emoji:'✨', title:'Shoe Restoration', desc:'Complete restoration of worn, damaged, or aged footwear. Structural repairs, cleaning, and finishing.', price:'₱400', img:'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&q=80' },
+  { emoji:'💧', title:'Leather Conditioning', desc:'Deep moisturizing treatment to restore suppleness, prevent cracking, and extend the life of leather.', price:'₱180', img:'https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=400&q=80' },
+  { emoji:'🎨', title:'Color Repainting', desc:'Professional color restoration and custom repainting for faded or scuffed leather and synthetic shoes.', price:'₱300', img:'https://images.unsplash.com/photo-1595341888016-a392ef81b7de?w=400&q=80' },
+  { emoji:'🏃', title:'Sneaker Restoration', desc:'Specialized cleaning, sole restoration, and whitening for premium sneakers and athletic footwear.', price:'₱350', img:'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&q=80' },
+  { emoji:'👜', title:'Bag Repair', desc:'Stitching, strap repair, zipper replacement, and conditioning for leather bags and accessories.', price:'₱200', img:'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&q=80' },
+  { emoji:'🎿', title:'Belt Repair', desc:'Hole punching, stitching repair, buckle replacement, and leather conditioning for belts of all types.', price:'₱100', img:'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=400&q=80' },
+];
+
+const TESTIMONIALS_DATA = [
+  { name:'Maria Santos', initial:'MS', rating:5, text:'Amante completely restored my husband\'s favorite leather shoes that I thought were beyond saving. The craftsmanship is incredible — you can\'t even tell they were damaged. Highly recommended!', role:'Verified Customer' },
+  { name:'Carlo Reyes', initial:'CR', rating:5, text:'Best shoe repair shop in Dasmariñas, hands down. Brought in my Nike Air Forces that were completely yellowed. Got them back looking brand new. Super worth it!', role:'Verified Customer' },
+  { name:'Liza Mendoza', initial:'LM', rating:5, text:'They repaired my leather bag and it looks absolutely stunning. Attention to detail is excellent. The price is very reasonable for the quality of work. Will definitely come back!', role:'Verified Customer' },
+  { name:'Ryan Flores', initial:'RF', rating:5, text:'Had my sole replaced and reglued — very solid work. Walked in with shoes that were falling apart, walked out with shoes that feel brand new. Solid craftsmanship and great service.', role:'Verified Customer' },
+  { name:'Jenny Cruz', initial:'JC', rating:5, text:'Very professional and fast turnaround. My suede boots needed deep cleaning and conditioning — the result was amazing. The staff was friendly and knowledgeable about shoe care.', role:'Verified Customer' },
+  { name:'Mark Villanueva', initial:'MV', rating:4, text:'Good quality restoration on my leather dress shoes. Color repainting was done perfectly — matched the original color exactly. Will trust Amante with all my footwear needs.', role:'Verified Customer' },
+];
+
+// ─── PRODUCT STORE (localStorage) ───────────────────────────
+function getProducts() {
+  try {
+    return JSON.parse(localStorage.getItem('amante_products') || '[]');
+  } catch(e) { return []; }
+}
+
+function saveProducts(products) {
+  localStorage.setItem('amante_products', JSON.stringify(products));
+}
+
+// Initialize with sample products if empty
+function initProducts() {
+  if (getProducts().length === 0) {
+    const defaults = [
+      { id: genId(), name: 'Leather Conditioner 250ml', desc: 'Premium leather conditioner for shoes, bags, and belts. Keeps leather supple and moisturized.', price: 299, stock: 15, img: 'https://images.unsplash.com/photo-1556906781-9a414961a183?w=400&q=80', emoji: '🧴' },
+      { id: genId(), name: 'Shoe Cleaning Kit', desc: 'Complete set with brush, cleaning foam, and microfiber cloth. Ideal for sneakers and leather shoes.', price: 450, stock: 10, img: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80', emoji: '🧽' },
+      { id: genId(), name: 'Waterproof Spray 200ml', desc: 'Protective waterproof coating spray for all shoe materials. Guards against rain, stains, and moisture.', price: 199, stock: 20, img: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&q=80', emoji: '💦' },
+      { id: genId(), name: 'Shoe Polish (Black)', desc: 'High-quality black leather shoe polish. Restores color, adds shine, and protects leather uppers.', price: 89, stock: 30, img: 'https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=400&q=80', emoji: '⚫' },
+      { id: genId(), name: 'Sneaker Whitener Pen', desc: 'Easy-to-use whitening pen for rubber soles and white leather panels. Instant results.', price: 149, stock: 25, img: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&q=80', emoji: '✏️' },
+      { id: genId(), name: 'Shoe Deodorizer Spray', desc: 'Eliminates odors and freshens shoes with antibacterial formula. Long-lasting freshness.', price: 159, stock: 18, img: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=400&q=80', emoji: '🌿' },
+    ];
+    saveProducts(defaults);
+  }
+}
+
+function genId() {
+  return 'P' + Date.now() + Math.floor(Math.random() * 1000);
+}
+
+// ─── CART ───────────────────────────────────────────────────
+let cart = JSON.parse(localStorage.getItem('amante_cart') || '[]');
+
+function saveCart() {
+  localStorage.setItem('amante_cart', JSON.stringify(cart));
+  updateCartBadge();
+}
+
+function updateCartBadge() {
+  const total = cart.reduce((a, i) => a + i.qty, 0);
+  const badge = document.getElementById('cart-badge');
+  badge.textContent = total;
+  badge.classList.toggle('show', total > 0);
+}
+
+function addToCart(productId) {
+  const products = getProducts();
+  const product = products.find(p => p.id === productId);
+  if (!product || product.stock <= 0) return;
+
+  const existing = cart.find(i => i.id === productId);
+  if (existing) {
+    if (existing.qty < product.stock) existing.qty++;
+    else { showNotification('Max stock reached!', '⚠️'); return; }
+  } else {
+    cart.push({ id: product.id, name: product.name, price: product.price, qty: 1, img: product.img, emoji: product.emoji });
+  }
+  saveCart();
+  showNotification(product.name + ' added to cart!', '✓');
+  renderCartItems();
+}
+
+function removeFromCart(productId) {
+  cart = cart.filter(i => i.id !== productId);
+  saveCart();
+  renderCartItems();
+}
+
+function changeQty(productId, delta) {
+  const item = cart.find(i => i.id === productId);
+  if (!item) return;
+  item.qty += delta;
+  if (item.qty <= 0) removeFromCart(productId);
+  else { saveCart(); renderCartItems(); }
+}
+
+function renderCartItems() {
+  const list = document.getElementById('cart-items-list');
+  const footer = document.getElementById('cart-footer');
+  const totalEl = document.getElementById('cart-total');
+
+  if (cart.length === 0) {
+    list.innerHTML = '<div class="cart-empty"><div class="cart-empty-icon">🛒</div><p>Your cart is empty.</p><p style="font-size:13px; margin-top:8px;">Browse our products and add items to get started.</p></div>';
+    footer.style.display = 'none';
+    return;
+  }
+
+  let total = 0;
+  list.innerHTML = cart.map(item => {
+    total += item.price * item.qty;
+    const imgEl = item.img
+      ? `<img class="cart-item-img" src="${item.img}" alt="${item.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" /><div class="cart-item-img" style="display:none; align-items:center; justify-content:center; font-size:24px;">${item.emoji || '📦'}</div>`
+      : `<div class="cart-item-img" style="display:flex; align-items:center; justify-content:center; font-size:24px;">${item.emoji || '📦'}</div>`;
+    return `
+      <div class="cart-item">
+        ${imgEl}
+        <div class="cart-item-info">
+          <div class="cart-item-name">${item.name}</div>
+          <div class="cart-item-price">₱${item.price.toLocaleString()} each</div>
+          <div class="cart-item-controls">
+            <button class="qty-btn" onclick="changeQty('${item.id}', -1)">−</button>
+            <span class="qty-display">${item.qty}</span>
+            <button class="qty-btn" onclick="changeQty('${item.id}', 1)">+</button>
+            <button class="cart-remove" onclick="removeFromCart('${item.id}')" title="Remove">🗑</button>
+          </div>
+        </div>
+      </div>`;
+  }).join('');
+
+  totalEl.textContent = '₱' + total.toLocaleString('en-PH', { minimumFractionDigits: 2 });
+  footer.style.display = 'block';
+}
+
+function openCart() {
+  renderCartItems();
+  document.getElementById('cart-overlay').classList.add('open');
+  document.getElementById('cart-panel').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCart() {
+  document.getElementById('cart-overlay').classList.remove('open');
+  document.getElementById('cart-panel').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ─── CHECKOUT ───────────────────────────────────────────────
+function openCheckout() {
+  closeCart();
+  const summary = document.getElementById('checkout-summary');
+  let total = 0;
+  let itemsHTML = cart.map(i => {
+    total += i.price * i.qty;
+    return `<div class="checkout-item"><span>${i.name} × ${i.qty}</span><span>₱${(i.price * i.qty).toLocaleString()}</span></div>`;
+  }).join('');
+  itemsHTML += `<div class="checkout-total"><span>Total Amount</span><span>₱${total.toLocaleString('en-PH', {minimumFractionDigits:2})}</span></div>`;
+  summary.innerHTML = `<div class="checkout-summary-title">Order Summary</div>${itemsHTML}`;
+  document.getElementById('checkout-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCheckout() {
+  document.getElementById('checkout-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+async function placeOrder() {
+  const name = document.getElementById('co-name').value.trim();
+  const phone = document.getElementById('co-phone').value.trim();
+  const email = document.getElementById('co-email').value.trim();
+  const address = document.getElementById('co-address').value.trim();
+  const notes = document.getElementById('co-notes').value.trim();
+
+  if (!name || !phone || !email || !address) {
+    alert('Please fill in all required fields.');
+    return;
+  }
+  if (!/^[\w.-]+@[\w.-]+\.\w{2,}$/.test(email)) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+
+  const btn = document.getElementById('place-order-btn');
+  btn.innerHTML = '<span class="spinner"></span> Processing...';
+  btn.disabled = true;
+
+  const refNum = 'ORD-' + Date.now().toString().slice(-6);
+  const orderDate = new Date().toLocaleString('en-PH', { timeZone: 'Asia/Manila' });
+  let total = cart.reduce((a, i) => a + i.price * i.qty, 0);
+
+  const orderItems = cart.map(i => `• ${i.name} × ${i.qty} = ₱${(i.price * i.qty).toLocaleString()}`).join('\n');
+
+  const emailBody = `
+🧾 NEW ORDER — AMANTE SHOE CARE CENTER
+═══════════════════════════════════════
+
+Order Reference: ${refNum}
+Date & Time: ${orderDate}
+
+CUSTOMER INFORMATION
+────────────────────
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Address: ${address}
+Notes: ${notes || 'None'}
+
+ORDERED ITEMS
+─────────────
+${orderItems}
+
+─────────────
+TOTAL: ₱${total.toLocaleString('en-PH', { minimumFractionDigits: 2 })}
+
+Please process this order and contact the customer to confirm.
+
+═══════════════════════════════════════
+Amante Shoe Care Center
+Zone 1, 15 Camerino Ave, Dasmariñas, Cavite
+📞 0950 896 2600
+`.trim();
+
+  // Use mailto: to open email client — this ensures it works on all hosting setups
+  // For production: replace with your EmailJS or backend API call
+  const mailtoLink = `mailto:amante.shoecarecenter@gmail.com?subject=New Order ${refNum} from ${encodeURIComponent(name)}&body=${encodeURIComponent(emailBody)}`;
+
+  // Reduce stock
+  const products = getProducts();
+  cart.forEach(cartItem => {
+    const p = products.find(x => x.id === cartItem.id);
+    if (p) p.stock = Math.max(0, p.stock - cartItem.qty);
+  });
+  saveProducts(products);
+
+  // Save order to localStorage as backup record
+  const orders = JSON.parse(localStorage.getItem('amante_orders') || '[]');
+  orders.unshift({ ref: refNum, date: orderDate, customer: name, phone, email, address, notes, items: [...cart], total });
+  localStorage.setItem('amante_orders', JSON.stringify(orders.slice(0, 100)));
+
+  // Clear cart
+  cart = [];
+  saveCart();
+  renderProducts();
+
+  btn.innerHTML = 'Place Order →';
+  btn.disabled = false;
+
+  closeCheckout();
+
+  // Open mail client
+  window.open(mailtoLink, '_blank');
+
+  // Show success
+  document.getElementById('success-title').textContent = 'Order Confirmed! 🎉';
+  document.getElementById('success-msg').textContent = `Thank you, ${name}! Your order has been received. We'll contact you at ${phone} to confirm. Your email client has been opened to send the order details.`;
+  document.getElementById('success-ref').textContent = refNum;
+  document.getElementById('success-modal').classList.add('open');
+}
+
+function closeSuccess() {
+  document.getElementById('success-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ─── BOOKING ───────────────────────────────────────────────
+function openBooking() {
+  document.getElementById('booking-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  // Set min date to today
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('bk-date').min = today;
+}
+
+function closeBooking() {
+  document.getElementById('booking-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function submitBooking() {
+  const name = document.getElementById('bk-name').value.trim();
+  const phone = document.getElementById('bk-phone').value.trim();
+  const email = document.getElementById('bk-email').value.trim();
+  const service = document.getElementById('bk-service').value;
+  const date = document.getElementById('bk-date').value;
+  const notes = document.getElementById('bk-notes').value.trim();
+
+  if (!name || !phone || !service) {
+    alert('Please fill in Name, Phone, and Service fields.');
+    return;
+  }
+
+  const refNum = 'BK-' + Date.now().toString().slice(-6);
+  const orderDate = new Date().toLocaleString('en-PH', { timeZone: 'Asia/Manila' });
+
+  const emailBody = `
+📅 NEW BOOKING REQUEST — AMANTE SHOE CARE CENTER
+══════════════════════════════════════════════════
+
+Booking Reference: ${refNum}
+Date Received: ${orderDate}
+
+CUSTOMER DETAILS
+────────────────
+Name: ${name}
+Phone: ${phone}
+Email: ${email || 'Not provided'}
+
+SERVICE REQUESTED
+─────────────────
+Service: ${service}
+Preferred Date: ${date || 'Flexible'}
+Notes: ${notes || 'None'}
+
+Please contact the customer to confirm the appointment.
+
+══════════════════════════════════════════════════
+Amante Shoe Care Center
+📞 0950 896 2600
+`.trim();
+
+  const mailtoLink = `mailto:amante.shoecarecenter@gmail.com?subject=Booking Request ${refNum} — ${encodeURIComponent(service)}&body=${encodeURIComponent(emailBody)}`;
+
+  window.open(mailtoLink, '_blank');
+  closeBooking();
+
+  document.getElementById('success-title').textContent = 'Booking Requested! 📅';
+  document.getElementById('success-msg').textContent = `Thank you, ${name}! Your booking request for ${service} has been sent. We'll contact you at ${phone} to confirm your appointment.`;
+  document.getElementById('success-ref').textContent = refNum;
+  document.getElementById('success-modal').classList.add('open');
+
+  // Reset form
+  ['bk-name','bk-phone','bk-email','bk-notes'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('bk-service').value = '';
+  document.getElementById('bk-date').value = '';
+}
+
+// ─── RENDER SERVICES ────────────────────────────────────────
+function renderServices() {
+  const grid = document.getElementById('services-grid');
+  grid.innerHTML = SERVICES_DATA.map(s => `
+    <div class="service-card">
+      <img class="service-img" src="${s.img}" alt="${s.title}" loading="lazy"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+      <div class="service-img-placeholder" style="display:none;">${s.emoji}</div>
+      <div class="service-body">
+        <h3 class="service-title">${s.title}</h3>
+        <p class="service-desc">${s.desc}</p>
+        <div class="service-footer">
+          <div class="service-price">
+            <div>${s.price} <span>starting price</span></div>
+          </div>
+          <button class="btn-service" onclick="openBooking()">Book Now</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ─── RENDER PRODUCTS ────────────────────────────────────────
+function renderProducts(query = '') {
+  const products = getProducts();
+  const filtered = query
+    ? products.filter(p => p.name.toLowerCase().includes(query.toLowerCase()) || p.desc.toLowerCase().includes(query.toLowerCase()))
+    : products;
+
+  const grid = document.getElementById('products-grid');
+  const empty = document.getElementById('no-products');
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '';
+    empty.style.display = 'block';
+    return;
+  }
+  empty.style.display = 'none';
+
+  grid.innerHTML = filtered.map(p => {
+    const inCart = cart.find(i => i.id === p.id);
+    const imgEl = p.img
+      ? `<img class="product-img" src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" /><div class="product-img-placeholder" style="display:none;">${p.emoji || '📦'}</div>`
+      : `<div class="product-img-placeholder">${p.emoji || '📦'}</div>`;
+    return `
+      <div class="product-card">
+        ${imgEl}
+        <div class="product-body">
+          <div class="product-name">${p.name}</div>
+          <div class="product-desc">${p.desc}</div>
+          <div class="product-footer">
+            <div>
+              <div class="product-price">₱${p.price.toLocaleString()}</div>
+              <div class="product-stock">${p.stock > 0 ? `${p.stock} in stock` : 'Out of stock'}</div>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart('${p.id}')" ${p.stock === 0 ? 'disabled' : ''}>
+              ${p.stock === 0 ? 'Out of Stock' : '+ Cart'}
+            </button>
+          </div>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+function filterProducts() {
+  const q = document.getElementById('search-input').value;
+  renderProducts(q);
+}
+
+// ─── RENDER TESTIMONIALS ────────────────────────────────────
+function renderTestimonials() {
+  const grid = document.getElementById('testimonials-grid');
+  grid.innerHTML = TESTIMONIALS_DATA.map(t => `
+    <div class="testimonial-card">
+      <div class="stars">${'★'.repeat(t.rating)}${'☆'.repeat(5 - t.rating)}</div>
+      <p class="testimonial-text">"${t.text}"</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">${t.initial}</div>
+        <div>
+          <div class="author-name">${t.name}</div>
+          <div class="author-sub">${t.role}</div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ─── ADMIN ──────────────────────────────────────────────────
+let editingId = null;
+
+function openAdmin() {
+  renderAdminProducts();
+  document.getElementById('admin-panel').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeAdmin() {
+  document.getElementById('admin-panel').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function switchTab(tabId) {
+  document.querySelectorAll('.admin-tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(tabId).classList.add('active');
+  event.target.classList.add('active');
+
+  if (tabId === 'tab-manage') renderAdminProducts();
+}
+
+function saveProduct() {
+  const name = document.getElementById('ap-name').value.trim();
+  const desc = document.getElementById('ap-desc').value.trim();
+  const price = parseFloat(document.getElementById('ap-price').value);
+  const stock = parseInt(document.getElementById('ap-stock').value);
+  const img = document.getElementById('ap-img').value.trim();
+  const emoji = document.getElementById('ap-emoji').value.trim() || '📦';
+
+  if (!name || !desc || isNaN(price) || isNaN(stock)) {
+    alert('Please fill in Name, Description, Price, and Stock.'); return;
+  }
+
+  const products = getProducts();
+
+  if (editingId) {
+    const idx = products.findIndex(p => p.id === editingId);
+    if (idx > -1) products[idx] = { ...products[idx], name, desc, price, stock, img, emoji };
+    editingId = null;
+    document.getElementById('save-product-btn').textContent = 'Save Product';
+  } else {
+    products.unshift({ id: genId(), name, desc, price, stock, img, emoji });
+  }
+
+  saveProducts(products);
+  renderProducts();
+  renderAdminProducts();
+  resetProductForm();
+  showNotification('Product saved!', '✓');
+}
+
+function resetProductForm() {
+  ['ap-name','ap-desc','ap-price','ap-stock','ap-img','ap-emoji'].forEach(id => document.getElementById(id).value = '');
+  editingId = null;
+  document.getElementById('save-product-btn').textContent = 'Save Product';
+}
+
+function editProduct(id) {
+  const products = getProducts();
+  const p = products.find(x => x.id === id);
+  if (!p) return;
+  editingId = id;
+  document.getElementById('ap-name').value = p.name;
+  document.getElementById('ap-desc').value = p.desc;
+  document.getElementById('ap-price').value = p.price;
+  document.getElementById('ap-stock').value = p.stock;
+  document.getElementById('ap-img').value = p.img || '';
+  document.getElementById('ap-emoji').value = p.emoji || '';
+  document.getElementById('save-product-btn').textContent = 'Update Product';
+  // Switch to add tab
+  document.querySelectorAll('.admin-tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-add').classList.add('active');
+  document.querySelector('.admin-tab').classList.add('active');
+  document.getElementById('ap-name').focus();
+}
+
+function deleteProduct(id) {
+  if (!confirm('Delete this product?')) return;
+  let products = getProducts();
+  products = products.filter(p => p.id !== id);
+  saveProducts(products);
+  renderProducts();
+  renderAdminProducts();
+  showNotification('Product deleted.', '🗑');
+}
+
+function renderAdminProducts() {
+  const list = document.getElementById('admin-product-list');
+  const empty = document.getElementById('admin-empty');
+  const products = getProducts();
+
+  if (products.length === 0) {
+    list.innerHTML = '';
+    empty.style.display = 'block';
+    return;
+  }
+  empty.style.display = 'none';
+
+  list.innerHTML = products.map(p => `
+    <div class="product-list-item">
+      ${p.img
+        ? `<img class="product-list-thumb" src="${p.img}" alt="${p.name}" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<div class=\\'product-list-thumb\\' style=\\'display:flex;align-items:center;justify-content:center;font-size:22px;\\'>${p.emoji || '📦'}</div>')" />`
+        : `<div class="product-list-thumb" style="display:flex;align-items:center;justify-content:center;font-size:22px;">${p.emoji || '📦'}</div>`}
+      <div class="product-list-info">
+        <div class="product-list-name">${p.name}</div>
+        <div class="product-list-meta">₱${p.price.toLocaleString()} · Stock: ${p.stock}</div>
+      </div>
+      <div class="product-list-actions">
+        <button class="btn-edit" onclick="editProduct('${p.id}')">Edit</button>
+        <button class="btn-delete" onclick="deleteProduct('${p.id}')">Delete</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ─── BEFORE & AFTER SLIDERS ─────────────────────────────────
+function initSliders() {
+  document.querySelectorAll('[data-slider]').forEach(slider => {
+    const before = slider.querySelector('.ba-before');
+    const handle = slider.querySelector('.ba-handle');
+    let dragging = false;
+
+    function setPosition(x) {
+      const rect = slider.getBoundingClientRect();
+      let pct = ((x - rect.left) / rect.width) * 100;
+      pct = Math.max(0, Math.min(100, pct));
+      before.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+      handle.style.left = pct + '%';
+    }
+
+    slider.addEventListener('mousedown', e => { dragging = true; setPosition(e.clientX); });
+    slider.addEventListener('touchstart', e => { dragging = true; setPosition(e.touches[0].clientX); }, { passive: true });
+    window.addEventListener('mousemove', e => { if (dragging) setPosition(e.clientX); });
+    window.addEventListener('touchmove', e => { if (dragging) setPosition(e.touches[0].clientX); }, { passive: true });
+    window.addEventListener('mouseup', () => dragging = false);
+    window.addEventListener('touchend', () => dragging = false);
+  });
+}
+
+// ─── NAVBAR ─────────────────────────────────────────────────
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+document.getElementById('nav-toggle').addEventListener('click', () => {
+  const mobile = document.getElementById('nav-mobile');
+  mobile.classList.toggle('open');
+});
+
+function closeNav() {
+  document.getElementById('nav-mobile').classList.remove('open');
+}
+
+// Close modals on escape
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    closeCart(); closeCheckout(); closeBooking(); closeAdmin();
+    document.getElementById('success-modal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+
+// ─── NOTIFICATION ───────────────────────────────────────────
+let notifTimer;
+function showNotification(msg, icon = '✓') {
+  clearTimeout(notifTimer);
+  const n = document.getElementById('notification');
+  document.getElementById('notif-text').textContent = msg;
+  n.querySelector('.notif-icon').textContent = icon;
+  n.classList.add('show');
+  notifTimer = setTimeout(() => n.classList.remove('show'), 3000);
+}
+
+// ─── SMOOTH SCROLL FOR NAV LINKS ────────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const offset = 80;
+      window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+    }
+  });
+});
+
+// ─── INIT ────────────────────────────────────────────────────
+// ─── DYNAMIC PALETTE FROM LOGO ───────────────────────────────
+function _rgbToHex(r, g, b) {
+  return '#' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('');
+}
+
+function _mix(a, b, t) {
+  return Math.round(a + (b - a) * t);
+}
+
+function _lerpColor(hex, t, towardsWhite = true) {
+  const r = parseInt(hex.substr(1,2),16);
+  const g = parseInt(hex.substr(3,2),16);
+  const b = parseInt(hex.substr(5,2),16);
+  if (towardsWhite) return _rgbToHex(_mix(r,255,t), _mix(g,255,t), _mix(b,255,t));
+  return _rgbToHex(_mix(r,0,t), _mix(g,0,t), _mix(b,0,t));
+}
+
+function _luminance(r,g,b){ return (0.2126*r + 0.7152*g + 0.0722*b)/255; }
+
+function applyPalette(primaryHex){
+  const root = document.documentElement.style;
+  const light = _lerpColor(primaryHex, 0.62, true);
+  const dark = _lerpColor(primaryHex, 0.36, false);
+  root.setProperty('--gold', primaryHex);
+  root.setProperty('--gold-light', light);
+  root.setProperty('--gold-dark', dark);
+  // set contrasting text for gold buttons
+  const r = parseInt(primaryHex.substr(1,2),16);
+  const g = parseInt(primaryHex.substr(3,2),16);
+  const b = parseInt(primaryHex.substr(5,2),16);
+  const textOn = _luminance(r,g,b) > 0.55 ? '#111111' : '#FFFFFF';
+  root.setProperty('--gold-contrast', textOn);
+}
+
+function setPaletteFromLogo(imgSrc){
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.crossOrigin = 'Anonymous';
+    img.src = imgSrc;
+    img.onload = () => {
+      try {
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        const W = 80, H = 80;
+        canvas.width = W; canvas.height = H;
+        ctx.drawImage(img, 0, 0, W, H);
+        const data = ctx.getImageData(0,0,W,H).data;
+        let r=0,g=0,b=0,count=0;
+        const step = 4 * 4; // sample every 4th pixel
+        for (let i=0;i<data.length;i+=step){
+          const alpha = data[i+3]; if (alpha < 125) continue;
+          r += data[i]; g += data[i+1]; b += data[i+2]; count++;
+        }
+        if (count===0) throw new Error('no visible pixels');
+        r = Math.round(r/count); g = Math.round(g/count); b = Math.round(b/count);
+        const primaryHex = _rgbToHex(r,g,b);
+        applyPalette(primaryHex);
+        resolve(primaryHex);
+      } catch(e){ resolve(null); }
+    };
+    img.onerror = () => resolve(null);
+  });
+}
+
+// Safe fallback palette (keeps original look if logo missing or blocked)
+function applyFallbackPalette(){ applyPalette('#C9A84C'); }
+
+document.addEventListener('DOMContentLoaded', async () => {
+  initProducts();
+  renderServices();
+  renderProducts();
+  renderTestimonials();
+  initSliders();
+  updateCartBadge();
+
+  // Try to derive palette from local logo image; if it fails, use fallback.
+  const logoPath = 'images/logo.png';
+  const primary = await setPaletteFromLogo(logoPath);
+  if (!primary) applyFallbackPalette();
+});
+</script>
+</body>
+</html>
