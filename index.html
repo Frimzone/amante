@@ -1393,7 +1393,7 @@
 })();
 
 // EmailJS config
-const EMAILJS_SERVICE_ID = 'service_u2nlpa3';
+const EMAILJS_SERVICE_ID = 'service_pysswh8';
 // TODO: set these template IDs once you paste them from EmailJS dashboard
 const EMAILJS_TEMPLATE_ID_ORDER = 'template_eoxbqb8';
 // If you want booking to use the same EmailJS template, keep this equal to ORDER.
@@ -1673,14 +1673,21 @@ Zone 1, 15 Camerino Ave, Dasmariñas, Cavite
 
   // Send email via EmailJS, then success UI
   try {
-    await sendEmailJS({
+    console.log('EmailJS sending ORDER with:', {
+      serviceId: EMAILJS_SERVICE_ID,
       templateId: EMAILJS_TEMPLATE_ID_ORDER,
       variables: emailVariables,
     });
+
+    const res = await sendEmailJS({
+      templateId: EMAILJS_TEMPLATE_ID_ORDER,
+      variables: emailVariables,
+    });
+
+    console.log('EmailJS ORDER sent:', res);
   } catch (e) {
-    // Keep the order confirmation but notify admin failed send
     console.error('Failed sending order email', e);
-    alert('Order was placed, but EmailJS failed to send the email. Please check EmailJS template/service IDs.');
+    alert('Order was placed, but EmailJS failed to send the email. Check browser console for the exact error.');
   }
 
   // Show success
@@ -1770,13 +1777,21 @@ Amante Shoe Care Center
   };
 
   try {
-    await sendEmailJS({
+    console.log('EmailJS sending BOOKING with:', {
+      serviceId: EMAILJS_SERVICE_ID,
       templateId: EMAILJS_TEMPLATE_ID_BOOKING,
       variables: emailVariables,
     });
+
+    const res = await sendEmailJS({
+      templateId: EMAILJS_TEMPLATE_ID_BOOKING,
+      variables: emailVariables,
+    });
+
+    console.log('EmailJS BOOKING sent:', res);
   } catch (e) {
     console.error('Failed sending booking email', e);
-    alert('Booking was requested, but EmailJS failed to send the email. Please check EmailJS template/service IDs.');
+    alert('Booking was requested, but EmailJS failed to send the email. Check browser console for the exact error.');
   }
 
   closeBooking();
