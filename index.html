@@ -1380,7 +1380,32 @@
 </div>
 
 <!-- ═══════════════════════ JAVASCRIPT ═══════════════════════ -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 <script>
+// EmailJS init
+(function initEmailJS(){
+  try {
+    emailjs.init('FH5NNYZlD3gbDkaFq');
+  } catch (e) {
+    console.error('EmailJS init failed', e);
+  }
+})();
+
+// EmailJS config
+const EMAILJS_SERVICE_ID = 'service_u2nlpa3';
+// TODO: set these template IDs once you paste them from EmailJS dashboard
+const EMAILJS_TEMPLATE_ID_ORDER = 'YOUR_ORDER_TEMPLATE_ID';
+const EMAILJS_TEMPLATE_ID_BOOKING = 'YOUR_BOOKING_TEMPLATE_ID';
+
+function sendEmailJS({ templateId, variables }){
+  if (!templateId || templateId.startsWith('YOUR_')){
+    alert('EmailJS template IDs are not set yet. Please update EMAILJS_TEMPLATE_ID_ORDER / EMAILJS_TEMPLATE_ID_BOOKING.');
+    return Promise.reject(new Error('Missing EmailJS templateId'));
+  }
+  return emailjs.send(EMAILJS_SERVICE_ID, templateId, variables);
+}
+
 // ─── DATA ───────────────────────────────────────────────────
 const SERVICES_DATA = [
   { emoji:'🧽', title:'Deep Shoe Cleaning', desc:'Complete interior and exterior cleaning. Removes dirt, stains, and odors. Restored to like-new freshness.', price:'₱150', img:'https://images.unsplash.com/photo-1556906781-9a414961a183?w=400&q=80' },
@@ -1605,9 +1630,22 @@ Zone 1, 15 Camerino Ave, Dasmariñas, Cavite
 📞 0950 896 2600
 `.trim();
 
-  // Use mailto: to open email client — this ensures it works on all hosting setups
-  // For production: replace with your EmailJS or backend API call
-  const mailtoLink = `mailto:amante.shoecarecenter@gmail.com?subject=New Order ${refNum} from ${encodeURIComponent(name)}&body=${encodeURIComponent(emailBody)}`;
+// EmailJS send (replaces mailto)
+  const toEmail = 'benferd22@gmail.com';
+
+  // Variables must match your EmailJS template placeholders
+  // Your template uses: {{name}}, {{phone}}, {{email}}, {{address}}, {{order_details}}, {{total}}, {{instructions}}, {{date}}
+  const emailVariables = {
+    name,
+    phone,
+    email,
+    address,
+    order_details: orderItems,
+    total: total.toFixed(2),
+    instructions: notes || 'None',
+    date: orderDate,
+    to_email: toEmail,
+  };
 
   // Reduce stock
   const products = getProducts();
@@ -1632,8 +1670,19 @@ Zone 1, 15 Camerino Ave, Dasmariñas, Cavite
 
   closeCheckout();
 
-  // Open mail client
-  window.open(mailtoLink, '_blank');
+  // Send email via EmailJS, then success UI
+  try {
+    await sendEmailJS({
+      templateId: EMAILJS_TEMPLATE_ID_ORDER,
+      variables: emailVariables,
+    });
+  } catch (e) {
+    // Keep the order confirmation but notify admin failed send
+    console.error('Failed sending order email', e);
+    alert('Order was placed, but EmailJS failed to send the email. Please check EmailJS template/service IDs.');
+  }
+
+  // Show success
 
   // Show success
   document.getElementById('success-title').textContent = 'Order Confirmed! 🎉';
@@ -1661,7 +1710,7 @@ function closeBooking() {
   document.body.style.overflow = '';
 }
 
-function submitBooking() {
+async function submitBooking() {
   const name = document.getElementById('bk-name').value.trim();
   const phone = document.getElementById('bk-phone').value.trim();
   const email = document.getElementById('bk-email').value.trim();
@@ -1703,9 +1752,32 @@ Amante Shoe Care Center
 📞 0950 896 2600
 `.trim();
 
-  const mailtoLink = `mailto:amante.shoecarecenter@gmail.com?subject=Booking Request ${refNum} — ${encodeURIComponent(service)}&body=${encodeURIComponent(emailBody)}`;
+  const toEmail = 'benferd22@gmail.com';
 
-  window.open(mailtoLink, '_blank');
+  // Variables based on your order template placeholders.
+  // If your booking template uses different fields, update these variables accordingly.
+  const emailVariables = {
+    name,
+    phone,
+    email: email || '',
+    address: 'N/A',
+    order_details: `Service: ${service}\nPreferred Date: ${date || 'Flexible'}\nNotes: ${notes || 'None'}`,
+    total: '0.00',
+    instructions: notes || 'None',
+    date: orderDate,
+    to_email: toEmail,
+  };
+
+  try {
+    await sendEmailJS({
+      templateId: EMAILJS_TEMPLATE_ID_BOOKING,
+      variables: emailVariables,
+    });
+  } catch (e) {
+    console.error('Failed sending booking email', e);
+    alert('Booking was requested, but EmailJS failed to send the email. Please check EmailJS template/service IDs.');
+  }
+
   closeBooking();
 
   document.getElementById('success-title').textContent = 'Booking Requested! 📅';
