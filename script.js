@@ -9,7 +9,7 @@
 })();
 
 // EmailJS config
-const EMAILJS_SERVICE_ID = 'service_pysswh8';
+const EMAILJS_SERVICE_ID = 'service_0z32zi8';
 // TODO: set these template IDs once you paste them from EmailJS dashboard
 const EMAILJS_TEMPLATE_ID_ORDER = 'template_eoxbqb8';
 // If you want booking to use the same EmailJS template, keep this equal to ORDER.
