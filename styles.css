@@ -155,20 +155,22 @@
     }
     .hero-logo-overlay {
       position: absolute;
-      top: 48px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 0;
-      width: min(320px, 46vw);
-      opacity: 0.92;
+      top: 18px;
+      left: 18px;
+      z-index: 3;
+      width: min(220px, 42vw);
+      background: rgba(255, 255, 255, 0.94);
+      padding: 10px 12px;
+      border-radius: 14px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
       pointer-events: none;
-      filter: drop-shadow(0 16px 28px rgba(0,0,0,0.3));
     }
     .hero-logo-overlay img {
       width: 100%;
       height: auto;
       display: block;
       object-fit: contain;
+      filter: none;
     }
     .hero-content {
       position: relative; z-index: 1;
